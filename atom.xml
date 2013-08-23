@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Building a Deployment Machine]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2013/08/22/building-a-deployment-machine/"/>
+    <updated>2013-08-22T22:50:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2013/08/22/building-a-deployment-machine</id>
+    <content type="html"><![CDATA[<p>Over the past year, I have worked to build a self-service deployment machine for a Fortune 500 Online Travel Agency.<br/>
+The product should integrate with puppet and activemq, and provide a secure, fault-tolerant self-service systen for users who were not specifically trained to do puppet deployments.</p>
+
+<!-- more -->
+
+
+<p>I&#8217;ll write more on this later.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Throw Everything on AWS]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2013/04/14/throw-everything-on-aws/"/>
+    <updated>2013-04-14T18:19:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2013/04/14/throw-everything-on-aws</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<p>I am paying $40 a month to linode for a 1Gb slice with no practical limits on transfers (there may in fact be limits, but I haven&#8217;t experienced them.)  I&#8217;m exploring whether I can move the services I run on linode to AWS, free tier, so save some $$.</p>
+
+<p>I run a wiki and a mail server.</p>
+
+<p>I found this: http://www.inboxs.com/index.php/linux-os/ec2-aws/10-how-to-install-iredmail-on-ec2</p>
+
+<p>The free tier allows Amazon linux as well as ubuntu.  The transfer limits may be an issue with a mail server.  I&#8217;m debating on imap mail servers available online. The upshot is that when I get turned into a forward for spam, I have to fight it on my linode server, but the imap provider would be responsible for it (time = money, so it&#8217;s often a good deal).</p>
+
+<p>More to come.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sweating Pipe]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/08/27/sweating-pipe/"/>
+    <updated>2012-08-27T15:38:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/08/27/sweating-pipe</id>
+    <content type="html"><![CDATA[<p>10 years ago, my wife and I bought a money pit which we affectionately call home.  Since then, we have both learned a wide variety of building trades through a process known as &#8220;dunk you in the freezing water to see if you can swim&#8221;.  We love the house, and continue to work on it and improve it.  This weekend, I had occasion to work on plumbing with copper pipe.  Here are some tips, for the uninitiated:</p>
+
+<!-- more -->
+
+
+<h2>Sweating pipe</h2>
+
+<p>For this article, I&#8217;ll call any pipe fitting a joint.  This might be an elbow, or a coupler, or any other joining pipe fitting.  Sweating pipe involves cutting pipes to appropriate lengths, sanding the ends of the pipe to about 1/2&#8221; (so it shines on every surface) covering the joing with flux on the inside, sliding the pipe into the joint fully, heating the joint with a torch until the flux bubbles and the joint accepts melty metal and touching the joint with the melty metal so that the metal melts into the joint.</p>
+
+<h2>Maxim</h2>
+
+<ul>
+<li>never sweat wet pipe - if there&#8217;s water in the line, you&#8217;ll have trouble getting clean solid joints.  You&#8217;ve been warned.</li>
+<li>whatever you sweat in a jig outside of the area where the pipe will be installed will never leak - whatever you sweat in the bathroom or laundry room or in a hole somewhere will likely leak. So build most of the new part at a jig, then take it to the jobsite and make adjustments.</li>
+</ul>
+
+
+<h2>Tips</h2>
+
+<ul>
+<li>Build a jig.  Might as well take your time and sweat pipe in a cool area where you can be comfortable.  I nailed some 2x4&#8217;s together and added some spring clamps to hold the pipe</li>
+<li>Examine every joint carefully after you sweat it.  If it has melty metal in the joint (especially if it has a thin &#8220;painted on&#8221; appearance of melty metal around the crack near the joint on all sides), it won&#8217;t leak.  if it doesn&#8217;t it will leak under pressure.  If you can&#8217;t seee the other side of the joint, then have faith in the magic of sweating pipe.  Essentially, if you draw a line perpendicular to the horizon and up through the circumference of the pipe, and if you get melty metal on the top of both sides of that line, you&#8217;re probably fine.</li>
+<li>You can fix a leaking joint after it&#8217;s installed with flux, melty metal and a torch, but it ain&#8217;t easy</li>
+<li>You may need to cut the leaking joint out and re-sweat it.  Since you can&#8217;t re-use a joint normally, this will involve adding two new coupler fittings - so be sure to have plenty of room to both sides of the new fitting in case you need to replace the entire thing.</li>
+<li>The melty metal is important - use it liberally.  You can clean up your work with the melty metal stick after you&#8217;re dome sweating the pipe (to remove any drips etc.).  Note that some melty metals are made for some conditions.  For example, a different melty metal (silver) is required for copper pipe joints under the slab.  Don&#8217;t ask me why, but this is why&#8230;</li>
+<li>Call a plumber if you have to do something that you can&#8217;t imagine how to do.</li>
+</ul>
+
+
+<h2>Tools</h2>
+
+<p>Keep this stuff around at all times.
+ * A torch - a MAP torch with the auto-starting end is an amazing tool, no garage should be without one.
+ * Flux - you can&#8217;t sweat pipe without it.  Buy the tub with the screw on lid.  Flux in tubes is for posers.
+ * A Flux brush - don&#8217;t get that stuff on your fingers.
+ * Melty metal
+ * Plenty of 1/2&#8221; and 3/4&#8221; copper pipe fittings - elbow&#8217;s, couplers, etc.
+ * At least 8&#8217; length of both 1/2&#8221; and 3/4&#8221; copper pipe
+ * Traditional and tight quarters pipe cutter.  I bought the tight quarters <a href="http://compare.ebay.com/like/280303231767?var=lv&amp;ltyp=AllFixedPriceItemTypes&amp;var=sbar">General Auto Cut</a>.  They&#8217;re fitted for the pipe diameter - so you have to buy one for 1/2&#8221; and one for 3/4&#8221;, but they work so well I&#8217;d say it&#8217;s worth it.
+ * A heat barrier.  You&#8217;ll probably have to sweat a pipe at some point which is in a wall cavity, so you run the risk of setting the wall on fire.  They make a cloth with grommets on the corners which you can nail up between the wall and your pipes so your torch flame doesn&#8217;t contact the wall directly.  I use an old automobile license plate.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reboot]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/08/22/reboot/"/>
+    <updated>2012-08-22T22:49:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/08/22/reboot</id>
+    <content type="html"><![CDATA[<p>I&#8217;m getting ready to make a significant life change.  This involves saying good-bye to people who were a technical resource to me, so now&#8217;s the time to write down all the good things they taught me. This stuff may come in handy sooner rather than later.</p>
+
+<!-- more -->
+
+
+<h2>Git</h2>
+
+<ul>
+<li><a href="http://sethrobertson.github.com/GitBestPractices">Git Best Practices</a></li>
+<li><a href="http://git-scm.com/book">Pro Git handbook</a></li>
+</ul>
+
+
+<h2>*nix</h2>
+
+<ul>
+<li><a href="http://tcpreplay.synfin.net/">tcpreplay</a></li>
+<li><a href="http://tmux.sourceforge.net/">tmux</a></li>
+</ul>
+
+
+<h2>css</h2>
+
+<ul>
+<li><a href="http://colinaarts.com/articles/float-containment/">float containment</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails Complex Form with Children and Grandchildren]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/08/06/rails-complex-form-with-children-and-grandchildren/"/>
+    <updated>2012-08-06T15:48:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/08/06/rails-complex-form-with-children-and-grandchildren</id>
+    <content type="html"><![CDATA[<p>I love Rails forms and the simplicity of AR associations in forms.  Ryab Bates explains in this railscast how easy it is to include child classes in associations in a form, and have all creates and updates happen automatically: <a href="http://railscasts.com/episodes/196-nested-model-form-revised">link</a>.  What Ryan doesn&#8217;t cover, is the possibility that the model&#8217;s child may have children (grandchildren).</p>
+
+<!-- more -->
+
+
+<p>After fighting with this for a week or so, I figured it out.  It&#8217;s all in the controller, where the child and grandchild is created at first:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>And in the helper method, where code is given to the javascript to add the new fields when &#8220;Add *&#8221; is clicked:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Note that I had to change Ryan&#8217;s helper adding in the second association and a bit of code to realize the grandchildren objects. Not only do you have to create the grandchild, but you have to associate the grandchild with the child so the form works properly.</p>
+
+<p>There&#8217;s probably a better solution.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tracing SS7]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/07/05/tracing-ss7/"/>
+    <updated>2012-07-05T14:36:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/07/05/tracing-ss7</id>
+    <content type="html"><![CDATA[<p>I ran a tcpdump of a failed attempt to communicate across SS7.  I saw the following:</p>
+
+<p>[Protocols in frame: mtp2:mtp3:sccp:tcap:ansi_tcap:ansi_map]</p>
+
+<p>I would like to understand that chain or protocols.  How do they relate to each other?  Does one enable the next?</p>
+
+<!-- more -->
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails with Unfriendly Databases]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases/"/>
+    <updated>2012-06-20T22:02:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases</id>
+    <content type="html"><![CDATA[<p>We all know that Rails is &#8220;Opinionated&#8221; when it comes to the backend database schema.  Tables are named after the plural word describing what they contain (&#8216;posts&#8217;, not &#8216;Post&#8217; or &#8216;post&#8217; or &#8216;boatload_o_posts&#8217;).  Tables have a primary key called &#8216;id&#8217;.  In fact, the easiest way to get along with rails from the gitgo is to let rails build it&#8217;s backend database for you, using migrations.  That&#8217;s crucial to getting your Rails mojo kung-fu working.  But what hapens when you need to connect your Rails app to an unfriendly database?  What if you have to read data from a database designed by some one who, gasp!, doesn&#8217;t do Rails?  What then???</p>
+
+<p>I recently added a report to my corporate site survey Rails project which needed to pull data from a bunch of joined tables in a database which was the backend for Manage Engine&#8217;s <a href="http://www.manageengine.com/products/support-center/">supportcenter</a>.  I really don&#8217;t like supportcenter, and I <em>really</em> don&#8217;t like supportcenter&#8217;s database.  Wow what a flaming sack of dogshit that thing is.</p>
+
+<!-- more -->
+
+
+<h2>Connecting to the unfriendly database</h2>
+
+<p>You can either add login/password to your model, or add them to database.yml.  I chose to add them to database.yml:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Then, we&#8217;ll use these credentials to connect to the database and run queries in our model.</p>
+
+<h2>A new Rails model for the unfriendly database&#8217;s table</h2>
+
+<p>Create a new model which inherits from ActiveRecord, like so:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<h2>Queries and results</h2>
+
+<p>Now we can add queries to the Workorder model which pull from this unfriendly supportcenter database:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Note the godawful table attributes in the supportcenter database.  If you&#8217;re sitting on your couch late at night, and you hear a knock on the door, and you go to the door and open it and look around, and if you see the supportcenter database on your doorstep, do not stomp out the fire!!!</p>
+
+<p>Therefore, we can slice and dice the result array from this query within the controller:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>It works like a charm.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[new slice]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/06/14/new-slice/"/>
+    <updated>2012-06-14T18:07:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/06/14/new-slice</id>
+    <content type="html"><![CDATA[<p>I have successfully migrated my VPS from a CentOS 5.6 slice on linode to anew CentOS 6.2 slice on linode.  I did this because I needed ot upgrade to CentOS 6.2 and I had no idea how to do it otherwise.  So, I bought a new slice and began to copy all my stuff over.  I reinstalled iRedMail (for nospam (at) jason-michael.com etc.) and rails with rvm and all the gems and all the other dev stuff and the mysql instance and postgresql etc.  Rails makes it so easy to move from server to server - since my projects are all on github, I just do a git clone to get the project on my new server, then I introduce myself (on the new server) to github so I can commit.  It works great.</p>
+
+<!-- more -->
+
+
+<p>Details:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Holy Mother of God - Amazon EC2 With No Pain]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/"/>
+    <updated>2012-05-21T11:23:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain</id>
+    <content type="html"><![CDATA[<p>This weekend I watched an eye-opening <a href="http://railscasts.com/episodes/347-rubber-and-amazon-ec2">railscast</a> explaining how to use Rubber to deploy Rails apps to Amazon EC2.  Sounds pretty benign until you actually see what can be done.  I&#8217;ll detail the whole experience in this post.</p>
+
+<!-- more -->
+
+
+<p>First, your Rails app has gotta be in the 3.x version.  It&#8217;s really good if you have the understanding that your app will be deployed to Amazon EC2 from the git-go.</p>
+
+<p>Second, your gonna get a Ubuntu linux instance when you deploy - deal with it.  If you&#8217;re a redhat bigot like me, you&#8217;ll have to overcome the initial shock.  But magically, Rubber with Rails does to linux packages and server configuration what Rails does to programming (Convention over Configuration), so it&#8217;s almost like Ubuntu isn&#8217;t even there under the covers.  But it is&#8230;  (so essentially, there aren&#8217;t <em>unlimited</em> choices for server/database etc.)  But there are an awful lot of good default configurations for things like apache with Postgresql, apache with MySQL, ngix with Postgresql etc.  There&#8217;s also some nosql configs - I&#8217;m interested in trying those out since Rubber seems to set up the connector and the database automagically.  Amazing.</p>
+
+<p>Third, you want to be on a workstation with rails directly loaded on it. I typically ssh into my development workstation from my Windows PC (I know, Windows?  SHAME!!) for various reasons.  I can do everything with this setup and rubber except test the app in my browser (since my browser would have to be on the remote workstation.)  All lucky fools sporting the MacBook Pro or jokers with linux on the desktop have no worries.  Come to think of it, I really need to make the jump.</p>
+
+<p>Here&#8217;s a list of rubber/capistrano commands (you run all of these in the root of the application):</p>
+
+<ul>
+<li><code>rubber vulcanize complete_passenger_postgresql</code> - this sets up your app for rubber.  You only run this once.</li>
+<li><code>cap rubber:create_staging</code> - you run this to create a &#8216;staging&#8217; environment - it runs for a very long time, and at the end you have a single instance on EC2 with database, web server, monit, and a boatload of other supporting services, which is visible from the internet and dns resolved from your desktop because rubber added the hostname from config/rubber/rubber.yml to your /etc/hosts file.</li>
+<li><code>cap rubber:destroy_all</code> - tear down all instances you stood up.  Do this every night unless you want to pay Amazon for instances running overnight doing nothing.  The beauty of this is you don&#8217;t have to keep them up - the rubber configuration files fully define the application environment in every way - you can stand up or tear down instances any time you want.</li>
+<li><code>cap rubber:create # db01 db:primary=true</code> - create the primary database required by the application (this is the database server only, not the app server rails is running on.)  Here&#8217;s where it starts getting amazing.</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - create a second database which is setup as a replicated slave to db01 above.  That&#8217;s right, I said replicated slave.  All the replicaton configuration is done for you.  It&#8217;s amazing.</li>
+<li><code>ALIAS=app01 ROLES=app cap rubber:create</code> - create the app server the rails app runs on.  It&#8217;s called app01 because you could create a hundred of them if you want to.  Call it app001 if you want to create a thousand.  Seriously.  But beware of hosting fees, dude.</li>
+<li><code>ALIAS=web01 ROLES=web cap rubber:create</code> - create the load balancer that will balance http sessions between the app servers built so far.  If you build 1 then the cluster is a cluster of 1.  But if you build 100 then this load balancer distributes traffic across all 100 app servers in a load-balanced fashion.  I think it uses round-robin.</li>
+<li><code>cap rubber:bootstrap</code> - prep all these boxes for deployment.  It puts them on EC2 instances and preps them for running.</li>
+<li><code>cap deploy:cold</code> - reboot all the instances and start them up</li>
+<li><code>cap rubber:tail_logs</code> - tail all the logs on all the servers you&#8217;ve setup on the EC2 instances.  This brings all the logs you need to be aware of into one space.</li>
+<li><code>cap deploy</code> - ???</li>
+<li><code>cap -T rubber</code> - shows all the commands available from capistrano/rubber.</li>
+<li><code>cap rubber:describe</code> - one of the commands from above.  Shows all the EC2 instances running.  Easy peasy.</li>
+<li><code>ALIAS=app02 ROLES=app cap rubber:create</code> - spin up another app server</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - spin up another database</li>
+<li><code>ALIAS=tools ROLES=web_tools cap rubber:create</code> - build a webtools box as well.  web tools boxes have all sorts of wonderful monitoring tools accessible over https for your cluster.  You can access webtools through the url <code>https://tools.app_name.com:8443</code>.  The username and password are defined in <code>config/rubber/rubber.yml</code>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A New Erlang Project]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/04/24/a-new-erlang-project/"/>
+    <updated>2012-04-24T22:08:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/04/24/a-new-erlang-project</id>
+    <content type="html"><![CDATA[<p>I have a new Erlang project which may pay $$$!</p>
+
+<!-- more -->
+
+
+<p>I&#8217;ll need to develop a RESTful interface for connecting with a cellular BSC (or <em>being</em> a cellular BSC), logging to syslog, and interfacing with a billing vendor, among other things.</p>
+
+<h3>Links</h3>
+
+<ul>
+<li><a href="https://github.com/Vagabond/erlang-syslog">erlang + syslog</a></li>
+<li><a href="http://www.erlang.org/doc/man/os_sup.html">os_sup</a> for Solaris - OS can send messages to Erlang</li>
+<li><a href="http://erlang.2086793.n4.nabble.com/logging-to-syslog-td2099303.html">logging to syslog</a></li>
+<li><a href="https://github.com/lemenkov/erlsyslog">erlsyslog</a> - another erlang syslog attempt - sends messages to UDP port 514</li>
+<li><a href="https://github.com/extend/ranch">ranch</a> - a TCP port pool</li>
+<li><a href="https://github.com/extend/cowboy">cowboy</a> - a web server and TCP port/connection pool</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conflicting scopes and how to make them play nice]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/04/04/conflicting-scopes-and-how-to-make-them-play-nice/"/>
+    <updated>2012-04-04T23:59:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/04/04/conflicting-scopes-and-how-to-make-them-play-nice</id>
+    <content type="html"><![CDATA[<p>If you do enough with Rails 2, you&#8217;ll be using named scopes (I think they&#8217;re frowned upon in Rails 3).  I use named scopes for everything, particularly when I need to write complex queries which involve joins of tables.  In this example, I have these models: an Rca, a Root Cause Analysis document, which is a report on a system failure and why it happened, a GenericProfile, which is a generalization of a System which might have a failure, an ImplementationType, which is a way a System might be implemented, a SoftwareRelease, which is the software the GenericProfile (System) might be running, and a FeatureGroup, which is a collection of SoftwareReleases.  When talking about Rcas, we need to group them by ImplementationType and by FeatureGroup, so we can say &#8220;show me all the Rcas that refer to this System type&#8221;, or &#8220;show me all the Rcas that refer to this method of implementation&#8221;.  We can do this with named scopes.</p>
+
+<!-- more -->
+
+
+<p>Here&#8217;s how I implemented the named scopes <code>by_feature_group</code> and <code>by_implementation_type</code>:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>This all works fine if they&#8217;re used separately:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>But, if they&#8217;re chained (as normal AR scopes can be easily), problems can occur:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Why is this happening?</p>
+
+<p>It&#8217;s happening because the magic of AR is merging the two complex queries together (for efficiency, and because it wouldn&#8217;t work if it didn&#8217;t), and the two queries aren&#8217;t merging well.  Specifically, <code>by_feature_group</code> joins on generic_profiles, but so does <code>by_implementation_type</code>, so the query mentions generic_profiles more than once, and mysql can&#8217;t tell which generic_profiles you&#8217;re talking about.  If only mysql were smarter!  To solve this problem, we could do one of two things (the second is better):</p>
+
+<ol>
+<li>remove the separate scopes and write a single new scope <code>by_feature_group_by_implementation_type</code></li>
+<li>alias generic_profiles in one of the scopes (let your hamster pick which one)</li>
+</ol>
+
+
+<p>The second option is better because it still allows the separate scopes to remain separate. The new <code>by_implementation_type</code> scope now looks like this:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized&#8217; for RubyPython::Python:Module</p>
+
+<p>Cool, eh?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[making pdfs]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/25/making-pdfs/"/>
+    <updated>2012-03-25T23:10:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/25/making-pdfs</id>
+    <content type="html"><![CDATA[<p>I have been converting all my &#8216;show&#8217; and &#8216;index&#8217; actions in my rails app to pdf&#8217;s using prawn.  It works great.  here&#8217;s the manual: <a href="http://prawn.majesticseacreature.com/manual.pdf">link</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Generic multiple attachments in Rails]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails/"/>
+    <updated>2012-03-23T16:16:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails</id>
+    <content type="html"><![CDATA[<p>If you use paperclip for attaching pictures to models in Rails, you&#8217;ve probably run into this problem.  At first, you&#8217;ve added a picture called &#8216;diagram&#8217; to an MVC called WhitePaper, and it works fine.  You can click on a link (diagram_url) and it pops the picture up in your browser, and everybody says &#8220;Wow!&#8221;  Then people start asking you to attach other pictures to other models, and more pictures to the WhitePaper model, and you discover that you&#8217;ve become an idiot.  Every time somebody asks for an attachment, you have to add code.  And you thought Rails was agile!</p>
+
+<!-- more -->
+
+
+<p>What you really need is a truly generic AttachedDocument which can be added to any model with a line <code>has many attached_documents</code> or <code>attachable</code>.  You ought to be able to render a view of 1 - n AttachedDocuments, add other attachments and remove existing ones.  Later on, you might want to keep versions of AttachedDocuments, so you can revert a change if necessary. And somehow, the new magic AttachedDocument ought to be able o sense it&#8217;s document&#8217;s mime type, size etc., and create resuzes and thumbnails using ImageMagik with ease.  Surely it&#8217;s possible.  Or has it already been done?  by this I mean, has anyone already rolled Paperclip into a generic AttachedDocuments gem?</p>
+
+<h3>CarrierWave attachments</h3>
+
+<p>I&#8217;m watchng ryanb&#8217;s excellent tutorial on using CarrierWave for file atachments as an alternative to Paperclip.  See here: <a href="http://railscasts.com/episodes/253-carrierwave-file-uploads">link</a>.  In this project, he creates a Gallery model and is able to create multiple Galleries and add multiple picture attachments to each Gallery.  This might be close to what I need - if I convert his Gallery model to a GenericAttachments model, then figure out how to allow multiple GenericAttachment&#8217;s per model-with-generic-attachments, then figure out how to allow a fixed set of &#8220;safe&#8217; mimetypes like png, jpeg, pdf, doc and xls, this might just work.</p>
+
+<h3>Links</h3>
+
+<ul>
+<li><a href="https://github.com/thoughtbot/paperclip">paperclip</a></li>
+<li><a href="http://groups.google.com/group/paperclip-plugin/browse_thread/thread/d03cac32d2abd4ab">discussion on googlecode</a></li>
+<li><a href="http://rubygems.org/search?utf8=%E2%9C%93&amp;query=paperclip">paperclip-related gems</a>
+*</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[erlang on AWS]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/18/erlang-on-aws/"/>
+    <updated>2012-03-18T22:06:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/18/erlang-on-aws</id>
+    <content type="html"><![CDATA[<p>AWS and Amazon Elastic Cloud could be the best playground for erlang projects.  I&#8217;m going to experiment with using EC2 to build a variety of erlang &#8220;Hello World&#8221; projects.</p>
+
+<!-- more -->
+
+
+<h2>Goals</h2>
+
+<h4>Virtual Machines</h4>
+
+<p>Figure out how to build AWS Amazon Linux (free tier) images the same way <a href="http://vagrantup.com/">vagrant</a> does images with <a href="https://www.virtualbox.org/">Oracle Virtualbox</a>.</p>
+
+<h4>Networking</h4>
+
+<p>Figure out how to get various EC2 images to talk to each other securely (using <a href="http://aws.amazon.com/vpc/">AWS VPC</a>).</p>
+
+<p>Here&#8217;s some links:</p>
+
+<ul>
+<li><a href="https://github.com/x6j8x/erlaws/tree">Erlang packages for AWS</a></li>
+<li><a href="https://github.com/mochi/mochiweb">mochiweb</a></li>
+<li><a href="https://github.com/archaelus/heroku-buildpack-erlang">heroku-buildpack-erlang</a></li>
+<li><a href="http://j2labs.tumblr.com/post/4679269154/instantiating-aws-micro-instances-with-erlang">AWS Micro Instances with Erlang</a></li>
+<li><a href="http://chrismoos.com/2009/09/28/building-an-erlang-chat-server-with-comet-part-1/">Erlang chat server with Comet</a></li>
+<li><a href="https://github.com/yrashk/socket.io-erlang">socket.io-erlang</a></li>
+<li><a href="https://github.com/mlinderm/vagrant-aws">vagrant-aws gem</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing for Fun and Profit]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/16/writing-for-fun-and-profit/"/>
+    <updated>2012-03-16T17:57:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/16/writing-for-fun-and-profit</id>
+    <content type="html"><![CDATA[<p>I have written a kazillion short stories and one screenplay and have started another.</p>
+
+<!-- more -->
+
+
+<p>I want to join some sort of Writer&#8217;s Guild in North Texas.  I found the following on the web:</p>
+
+<ul>
+<li><a href="http://www.writersleague.org/">Writer&#8217;s League of Texas</a>
+
+<ul>
+<li>membership: $50 individual, $80 couple</li>
+<li>plusses: lots of exposure, State-wide writers to meet and mingle, events are great</li>
+<li>minuses: mostly in Austin</li>
+</ul>
+</li>
+<li><a href="http://www.dallasscreenwriters.com/">Dallas Screenwriter&#8217;s Association</a>
+
+<ul>
+<li>membership: #85 individual, $45 each additional family member</li>
+<li>plusses: local (Dallas, anyways)</li>
+<li>minuses: expensive</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thank you God for Coffee]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/03/thank-you-god-for-coffee/"/>
+    <updated>2012-03-03T13:38:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/03/thank-you-god-for-coffee</id>
+    <content type="html"><![CDATA[<p>Thank you God for Coffee.  That is all.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Home Robotics]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/02/14/home-robotics/"/>
+    <updated>2012-02-14T23:28:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/02/14/home-robotics</id>
+    <content type="html"><![CDATA[<p>Spend an hour or so on the internet, and it&#8217;s immediately clear to anyone with half a brain that one can purchase and assemble without too much trouble a truly powerful home computer, complete with optical drives, processors, memory and a fixed disc.  This computer can be both as powerful as and sometimes much more powerful than commercially-available products from Dell, HP etc.  So, why can&#8217;t the same be said for Robotics?</p>
+
+<!-- more -->
+
+
+<p>Research on the web, and you can find sites like <a href="http://www.robotshop.com/robot-parts.html">this</a> one, which sells 5 basic robotic parts:</p>
+
+<blockquote><ol>
+<li><em>Sensors</em> - for constructing &#8220;intelligent&#8221; robots which can detect and react to their environment</li>
+<li><em>Microcontrollers</em> - the brains of the robot</li>
+<li><em>Motors</em> - for motion</li>
+<li><em>Electronics</em> - motor controllers, cables, LCDs etc.</li>
+<li><em>Communications and Control</em> - so robots can talk to each other and to a base station</li>
+</ol>
+</blockquote>
+
+<p>So, it seems robot parts are for sale on the web, so what am I on about?  What I&#8217;m really talking about is this short list:</p>
+
+<blockquote><ol>
+<li><em>Arms</em></li>
+<li><em>Legs</em></li>
+<li><em>Feet</em></li>
+</ol>
+</blockquote>
+
+<p>This may sound juvenile, but in my mind if a geek could assemble from parts a humanoid robot - standing approximate 5 feet tall, able to walk upright and manipulate objects without crushing them, and equipped with basic vocal communication (Yodaspeak, for example) - geeks would eat it up.  And the pricepoint could be in as much as the price of a car.  How big is the aftermarket for car parts for mechanical engineering geeks?  The same could exist for robotics geeks.</p>
+
+<p>Imagine downloading an Android app for your robot that made it able to manipulate a home vaccuum cleaner so that it would push it around your flat every few days?  Or imagine an app that taught your robot how to wash the laundry.  Many of the everyday mundane tasks we perform to live our lives are simple enough to teach a machine to do, right?</p>
+
+<h2>What is Needed</h2>
+
+<p>Basically, somebody has to come up with a standard.  Joints have to be spec&#8217;d out, along with interfaces with respect to voltage and a data standard (USB, anyone?)  Where do the bolts go?  How big around is the coupler?  Once this is done, we&#8217;re off to the races!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Idea Walk]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/02/12/idea-walk/"/>
+    <updated>2012-02-12T19:11:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/02/12/idea-walk</id>
+    <content type="html"><![CDATA[<p>I took a walk today with my dog and had a number of ideas.</p>
+
+<!-- more -->
+
+
+<h2>Community Cooking</h2>
+
+<p>I could smell what people were cooking in their houses.  Could there be a way where everyone could taste the dinner of everyone else?  Could we all login to a <strong>web service</strong> and offer up &#8216;an extra helping&#8217; of Beef Stroghanoff or Beef Enchiladas or Chicken Cacciatore for cost plus a small fee?  Could the entire neighborhood find themselves cooking for others and making a tidy profit, such that <em>when you cook at home, the service pays for the materials out of your exchange profits</em>?</p>
+
+<h2>Hive messaging</h2>
+
+<p>Could there be a way to be able to text the guy next to you anonymously without meeting him first?  Perhaps everybody would be registered with a service that tracks our sms/mms handle, photo and GPS coordinates, so that you could launch the app on your phone and be able to pick the stranger next to you and sms &#8220;Hello&#8221; to him?  I see this as more of an advancement in civilization than just a new service.  But, just like the guy who tries to remove a screw with a hammer because all he knows is the hammer and thus, to him, everything looks like a nail, I&#8217;m solving this problem with a web service.  So I can see a weakness in my solution.  But surely there&#8217;s an excellent solution to this.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[attack]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/02/09/attack/"/>
+    <updated>2012-02-09T21:24:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/02/09/attack</id>
+    <content type="html"><![CDATA[<blockquote><p>The creature, if you could call it that, was very nearly transparent.  It floated through the sky like a giant condom filled with a now cloudy and then clear, undulating fluid.  There were no structures visible within it&#8217;s external membrane, nothing that a modern biologist would recognize anyway.  Inside, it was a total mystery, but outside, across it&#8217;s skin, it was covered with a slick, shimmering layer of hydrofloric acid at such an amped up concentration so that it would eat through living flesh almost instantly.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Richard never saw it descend.  He did not even feel it slap against the right side of his head, with the diffuse force of a  wet t-shirt.  And he did not feel it when the slurry it left all over his face and neck ate through his skin and hair and dissolved blood, flesh and muscle in a half a second.  He <em>did</em> feel a warm, dull pain as the boiling acid began to eat through his skull, but mercifully, by this time he was gone, lying limply in the street beside his lawn mower.</p>
+
+<p>Richard spent the first third of his life flunking through grade school, working odd jobs, meeting his loving wife.  He spent the next third of his life welding for the Santa Fe Railroad and siring four unremarkable children.  He spent the last few minutes of his life gasping through two new holes in his neck until he stopped breathing altogether; his head had all but disappeared, transforming into a black and dark crimson boiling plasma.</p>
+
+<p>Pauline heard a loud thud outside the kitchen door.  She looked up from her newspaper, saw nothing of interest through the door&#8217;s curtained window, and turned back to the editorial about the corrupting power of money in politics.  The sound thumped again, this time twice as loud.  She frowned, folded the paper and placed it beside her half-eaten piece of toast, slipped on her houseshoes and shuffled towards the door.  She peeked through the window and saw nothing at all.</p>
+
+<p>Pauline opened the kitchen door with mild disgust.  If that stupid mutt from across the street was digging in her azaleas again, this time she might grab a shovel and, God help her, she might just do something about it.  She might just brain the bastard.  But she saw nothing remarkable across her sideyard nor in her neighbor&#8217;s yard.  Then she looked down.  She saw something that immediately struck her with disgust and revulsion so shocking that she nearly lost her breakfast that very moment.  Sitting atop the doormat was a truly ugly sight.  When she was a child, she vividly remembered seeing a large dead dog sitting between two lanes on the interstate, with most of his skin torn off, surrounded by a cacaphony of gorging flies.  This thing was easily more disgusting than that poor dog.</p>
+
+<p>The creature rose up and lept in the air.  It landed across Pauline&#8217;s chest in a &#8220;whump!&#8221;, knocking her off her feet and into her kitchen.  She was dead before she hit the floor.</p>
+
+<p>Chad saw the creature on Ms Pauline&#8217;s kitchen stoop.  He was sitting on his behind in a soft patch of dirt, digging roads through the soil with his Hotwheels cars and making a boisterous &#8220;vrroom!&#8221; sound as the cars sped by.  Out of the corner of his eye, he saw the glimmer of the creature sitting on the doormat.  Then he saw it rise up and slam against the kitchen door.  He was at once, both fascinated and scared.  He gathered up his Hotwheels and put them in the front pocket of his bib overalls, and rose to a kneeling position, never once taking his eyes off the creature.  It crashed against the door again, and he rose to his feet.</p>
+
+<p>Then the kitchen door opened and Pauline stepped out.  Chad screamed in horror as the creature flew at Ms Pauline, knocking her backward into the kitchen.  He stood in shock as the door stood open.  He did not breathe, He stood frozen and numb.  Then the creature came out of the door again, floating in mid air.  Chad dove as fast as he could behind a boxwood shrub and peered out, shaking from head to toe.  The creature flew the other way, and Chad finally exhaled.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Difficulty Finding Time for Life Outside of Work]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/"/>
+    <updated>2012-01-18T19:19:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work</id>
+    <content type="html"><![CDATA[<p>If you work a technical job with a salary, you&#8217;re already facing two great dilemmas.  1.) you work for a salary, and 2.) you work with technology, where the <em>work</em> is almost never <em>done</em>.  I find myself caught in a trap often enough - I don&#8217;t do well if I don&#8217;t get adequate sleep nor if I don&#8217;t have adequate time to spend with my wife and kids.  Yet I don&#8217;t do well at work unless I&#8217;m perfectly willing to burn the proverbial candle at both ends. Dealing with this struggle effectively requires a number of crucial habits and procedures which you do not violate no matter what.</p>
+
+<!-- more -->
+
+
+<h2>Be Good to Yourself</h2>
+
+<p>Get plenty of sleep. Get three decent meals every day and don&#8217;t carb up and don&#8217;t eat because you&#8217;re bored and don&#8217;t eat crap.  On a typical commercial street in a typical city there are about 10 restaurants.  Get used to the fact that you can never eat in 80% of them - ever.  McDonald&#8217;s has nothing for sale for you if you care at all about your health.  A few cliche&#8217;s come to mind: <em>don&#8217;t dig your grave with a spoon</em> and <em>eat to live, don&#8217;t live to eat</em>.  Above all, don&#8217;t let your all-consuming, never-ending cluster-fuck of a job cause you to compromise on your health.  It&#8217;s not worth it.</p>
+
+<h2>Be Honest About Your Abilities</h2>
+
+<p>You may think telling your supervisor that you can do some technical task that you&#8217;ve never done before is a great career move.  While she&#8217;s not looking, you can hit the web and learn how to do it in a flash and produce something that works in a short amount of time.  But in reality, she&#8217;ll catch you despirately searching the web and accuse you of wasting time on the interwebs.  And more often than not, you&#8217;ll create total crap - it will be your first try after all.  It&#8217;s better to be honest.  Instead of saying, &#8220;Sure I can do that!&#8221;, say &#8221; I&#8217;ve never done that, but I&#8217;m interested in learning!&#8221;  Who know&#8217;s, the company might pay to train you if you show a talent for the task.  Paid training is usually a waste of time, but it can afford you contacts in the industry - folks who can help you climb your own ladder of success.  So, be honest first.</p>
+
+<h2>Be Careful with Deadlines</h2>
+
+<p>If you think you can&#8217;t finish the project on time, say so.  Don&#8217;t nag on and on about Management&#8217;s inability to understand the technical process, but make one clear concise statement about the deadline and move on.  Like so: &#8220;We&#8217;re putting this project first and devoting every resource to it&#8217;s success, but I do not believe we will be able to deliver on time and under budget.  Here&#8217;s why.&#8221;</p>
+
+<h2>Get it in Writing</h2>
+
+<p>If you&#8217;re surrounded by people who refuse to send memo&#8217;s or emails when they ask for things or demand a change in procedure, you&#8217;re in for trouble.  People invariably forget what they asked for, particularly when things go south.  People who refuse to &#8216;put it in writing&#8217; also seem to be excellent at explaining a past event in a way that makes their involvement in the failure blameless and innocent.  So insist on an email.  If your supervisor stops you at the water cooler and asks you to change course in a project, go back to your desk and write a recap email.  Like so: &#8220;Today we met briefly at the water cooler, and I understood you to say you would like us to change this or that about the project.  Can you confirm this and address a few of my concerns below.&#8221;  You&#8217;ll be glad you did.</p>
+]]></content>
+  </entry>
+  
+</feed>

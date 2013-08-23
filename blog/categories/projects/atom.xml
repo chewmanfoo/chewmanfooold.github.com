@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: projects | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A New Erlang Project]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/04/24/a-new-erlang-project/"/>
+    <updated>2012-04-24T22:08:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/04/24/a-new-erlang-project</id>
+    <content type="html"><![CDATA[<p>I have a new Erlang project which may pay $$$!</p>
+
+<!-- more -->
+
+
+<p>I'll need to develop a RESTful interface for connecting with a cellular BSC (or <em>being</em> a cellular BSC), logging to syslog, and interfacing with a billing vendor, among other things.</p>
+
+<h3>Links</h3>
+
+<ul>
+<li><a href="https://github.com/Vagabond/erlang-syslog">erlang + syslog</a></li>
+<li><a href="http://www.erlang.org/doc/man/os_sup.html">os_sup</a> for Solaris - OS can send messages to Erlang</li>
+<li><a href="http://erlang.2086793.n4.nabble.com/logging-to-syslog-td2099303.html">logging to syslog</a></li>
+<li><a href="https://github.com/lemenkov/erlsyslog">erlsyslog</a> - another erlang syslog attempt - sends messages to UDP port 514</li>
+<li><a href="https://github.com/extend/ranch">ranch</a> - a TCP port pool</li>
+<li><a href="https://github.com/extend/cowboy">cowboy</a> - a web server and TCP port/connection pool</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

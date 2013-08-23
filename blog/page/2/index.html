@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jason Michael dot com</title>
+  <meta name="author" content="Jason Michael">
+
+  
+  <meta name="description" content="If you do enough with Rails 2, you&#8217;ll be using named scopes (I think they&#8217;re frowned upon in Rails 3). I use named scopes for everything &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chewmanfoo.github.com/blog/page/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jason Michael dot com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jason Michael dot com</a></h1>
+  
+    <h2>My personal blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chewmanfoo.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/04/conflicting-scopes-and-how-to-make-them-play-nice/">Conflicting Scopes and How to Make Them Play Nice</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-04T23:59:00-05:00" pubdate data-updated="true">Apr 4<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/04/04/conflicting-scopes-and-how-to-make-them-play-nice/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you do enough with Rails 2, you&#8217;ll be using named scopes (I think they&#8217;re frowned upon in Rails 3).  I use named scopes for everything, particularly when I need to write complex queries which involve joins of tables.  In this example, I have these models: an Rca, a Root Cause Analysis document, which is a report on a system failure and why it happened, a GenericProfile, which is a generalization of a System which might have a failure, an ImplementationType, which is a way a System might be implemented, a SoftwareRelease, which is the software the GenericProfile (System) might be running, and a FeatureGroup, which is a collection of SoftwareReleases.  When talking about Rcas, we need to group them by ImplementationType and by FeatureGroup, so we can say &#8220;show me all the Rcas that refer to this System type&#8221;, or &#8220;show me all the Rcas that refer to this method of implementation&#8221;.  We can do this with named scopes.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/04/conflicting-scopes-and-how-to-make-them-play-nice/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/25/making-pdfs/">Making Pdfs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-25T23:10:00-05:00" pubdate data-updated="true">Mar 25<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/25/making-pdfs/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have been converting all my &#8216;show&#8217; and &#8216;index&#8217; actions in my rails app to pdf&#8217;s using prawn.  It works great.  here&#8217;s the manual: <a href="http://prawn.majesticseacreature.com/manual.pdf">link</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/23/generic-multiple-attachments-in-rails/">Generic Multiple Attachments in Rails</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-23T16:16:00-05:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/23/generic-multiple-attachments-in-rails/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you use paperclip for attaching pictures to models in Rails, you&#8217;ve probably run into this problem.  At first, you&#8217;ve added a picture called &#8216;diagram&#8217; to an MVC called WhitePaper, and it works fine.  You can click on a link (diagram_url) and it pops the picture up in your browser, and everybody says &#8220;Wow!&#8221;  Then people start asking you to attach other pictures to other models, and more pictures to the WhitePaper model, and you discover that you&#8217;ve become an idiot.  Every time somebody asks for an attachment, you have to add code.  And you thought Rails was agile!</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/23/generic-multiple-attachments-in-rails/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/18/erlang-on-aws/">Erlang on AWS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-18T22:06:00-05:00" pubdate data-updated="true">Mar 18<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/18/erlang-on-aws/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>AWS and Amazon Elastic Cloud could be the best playground for erlang projects.  I&#8217;m going to experiment with using EC2 to build a variety of erlang &#8220;Hello World&#8221; projects.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/18/erlang-on-aws/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/16/writing-for-fun-and-profit/">Writing for Fun and Profit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-16T17:57:00-05:00" pubdate data-updated="true">Mar 16<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/16/writing-for-fun-and-profit/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have written a kazillion short stories and one screenplay and have started another.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/03/16/writing-for-fun-and-profit/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/03/thank-you-god-for-coffee/">Thank You God for Coffee</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-03T13:38:00-06:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/03/thank-you-god-for-coffee/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Thank you God for Coffee.  That is all.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/14/home-robotics/">Home Robotics</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-14T23:28:00-06:00" pubdate data-updated="true">Feb 14<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/02/14/home-robotics/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Spend an hour or so on the internet, and it&#8217;s immediately clear to anyone with half a brain that one can purchase and assemble without too much trouble a truly powerful home computer, complete with optical drives, processors, memory and a fixed disc.  This computer can be both as powerful as and sometimes much more powerful than commercially-available products from Dell, HP etc.  So, why can&#8217;t the same be said for Robotics?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/14/home-robotics/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/12/idea-walk/">Idea Walk</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-12T19:11:00-06:00" pubdate data-updated="true">Feb 12<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/02/12/idea-walk/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I took a walk today with my dog and had a number of ideas.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/12/idea-walk/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/09/attack/">Attack</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-09T21:24:00-06:00" pubdate data-updated="true">Feb 9<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/02/09/attack/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>The creature, if you could call it that, was very nearly transparent.  It floated through the sky like a giant condom filled with a now cloudy and then clear, undulating fluid.  There were no structures visible within it&#8217;s external membrane, nothing that a modern biologist would recognize anyway.  Inside, it was a total mystery, but outside, across it&#8217;s skin, it was covered with a slick, shimmering layer of hydrofloric acid at such an amped up concentration so that it would eat through living flesh almost instantly.</p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/02/09/attack/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/">Difficulty Finding Time for Life Outside of Work</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-18T19:19:00-06:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you work a technical job with a salary, you&#8217;re already facing two great dilemmas.  1.) you work for a salary, and 2.) you work with technology, where the <em>work</em> is almost never <em>done</em>.  I find myself caught in a trap often enough - I don&#8217;t do well if I don&#8217;t get adequate sleep nor if I don&#8217;t have adequate time to spend with my wife and kids.  Yet I don&#8217;t do well at work unless I&#8217;m perfectly willing to burn the proverbial candle at both ends. Dealing with this struggle effectively requires a number of crucial habits and procedures which you do not violate no matter what.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>
+    I am a middle-aged white male living in North Texas, USA.  I am a career linux Systems Engineer and Software Developer with a Masters of Software Engineering from DePaul University and a Bachelors in Computer Science Engineering from the University of Texas at Arlington.  I love writing software and lately have been spending a lot of enjoyable time building web apps using Ruby on Rails.  In the past I have worked with PHP and before that Java and C/C++.
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/22/building-a-deployment-machine/">Building a Deployment Machine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/14/throw-everything-on-aws/">Throw Everything on AWS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/27/sweating-pipe/">Sweating Pipe</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/22/reboot/">Reboot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/06/rails-complex-form-with-children-and-grandchildren/">Rails Complex Form with Children and Grandchildren</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/chewmanfoo">@chewmanfoo</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'chewmanfoo',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section>
+  <h1>My Pinboard</h1>
+  <ul id="pinboard_linkroll">Fetching linkroll&#8230;</ul>
+  <p><a href="http://pinboard.in/u:chewmanfoo">My Pinboard Bookmarks &raquo;</a></p>
+</section>
+<script type="text/javascript">
+  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
+  var pinboard_user = "chewmanfoo"; //id target for pinboard list
+  var pinboard_count = 10; //id target for pinboard list
+  (function(){
+    var pinboardInit = document.createElement('script');
+    pinboardInit.type = 'text/javascript';
+    pinboardInit.async = true;
+    pinboardInit.src = '/javascripts/pinboard.js';
+    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
+  })();
+</script>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/chewmanfoo@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jason Michael -
+  <span class="credit">Brilliantly powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jasonmichaeldotcom';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

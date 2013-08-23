@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: work, | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/work-/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Difficulty Finding Time for Life Outside of Work]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/"/>
+    <updated>2012-01-18T19:19:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work</id>
+    <content type="html"><![CDATA[<p>If you work a technical job with a salary, you're already facing two great dilemmas.  1.) you work for a salary, and 2.) you work with technology, where the <em>work</em> is almost never <em>done</em>.  I find myself caught in a trap often enough - I don't do well if I don't get adequate sleep nor if I don't have adequate time to spend with my wife and kids.  Yet I don't do well at work unless I'm perfectly willing to burn the proverbial candle at both ends. Dealing with this struggle effectively requires a number of crucial habits and procedures which you do not violate no matter what.</p>
+
+<!-- more -->
+
+
+<h2>Be Good to Yourself</h2>
+
+<p>Get plenty of sleep. Get three decent meals every day and don't carb up and don't eat because you're bored and don't eat crap.  On a typical commercial street in a typical city there are about 10 restaurants.  Get used to the fact that you can never eat in 80% of them - ever.  McDonald's has nothing for sale for you if you care at all about your health.  A few cliche's come to mind: <em>don't dig your grave with a spoon</em> and <em>eat to live, don't live to eat</em>.  Above all, don't let your all-consuming, never-ending cluster-fuck of a job cause you to compromise on your health.  It's not worth it.</p>
+
+<h2>Be Honest About Your Abilities</h2>
+
+<p>You may think telling your supervisor that you can do some technical task that you've never done before is a great career move.  While she's not looking, you can hit the web and learn how to do it in a flash and produce something that works in a short amount of time.  But in reality, she'll catch you despirately searching the web and accuse you of wasting time on the interwebs.  And more often than not, you'll create total crap - it will be your first try after all.  It's better to be honest.  Instead of saying, "Sure I can do that!", say " I've never done that, but I'm interested in learning!"  Who know's, the company might pay to train you if you show a talent for the task.  Paid training is usually a waste of time, but it can afford you contacts in the industry - folks who can help you climb your own ladder of success.  So, be honest first.</p>
+
+<h2>Be Careful with Deadlines</h2>
+
+<p>If you think you can't finish the project on time, say so.  Don't nag on and on about Management's inability to understand the technical process, but make one clear concise statement about the deadline and move on.  Like so: "We're putting this project first and devoting every resource to it's success, but I do not believe we will be able to deliver on time and under budget.  Here's why."</p>
+
+<h2>Get it in Writing</h2>
+
+<p>If you're surrounded by people who refuse to send memo's or emails when they ask for things or demand a change in procedure, you're in for trouble.  People invariably forget what they asked for, particularly when things go south.  People who refuse to 'put it in writing' also seem to be excellent at explaining a past event in a way that makes their involvement in the failure blameless and innocent.  So insist on an email.  If your supervisor stops you at the water cooler and asks you to change course in a project, go back to your desk and write a recap email.  Like so: "Today we met briefly at the water cooler, and I understood you to say you would like us to change this or that about the project.  Can you confirm this and address a few of my concerns below."  You'll be glad you did.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Late Night Window]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/01/11/late-night-window/"/>
+    <updated>2012-01-11T01:52:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/01/11/late-night-window</id>
+    <content type="html"><![CDATA[<p>Up tonight working on deploying a new version of our OTA software to a regional cellular provider who will remain anonymous.  Since my wife is a troop leader and both my girls are Girl Scouts, I'm surrounded by crates and crates of cookies right now.  I'm eating haystacks at the moment.  <em>I know they changed the name, but I'm calling them haystacks.</em></p>
+
+<p>I wonder who makes these cookies?  They sure are good.  My dog got into a box of haystacks yesterday - ate a half a pack before we stopped him.  That dog sure was acting strange afterwards.</p>
+
+<p>I try to imagine I'm doing worthwhile work, like Richard Feynman at Los Alamos, when I'm working one of these windows.  I wonder if the boys in the Manhattan Project ate Girl Scout cookies when they designed the first atom bomb. Not very likely.</p>
+]]></content>
+  </entry>
+  
+</feed>

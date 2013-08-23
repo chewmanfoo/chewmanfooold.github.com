@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Holy Mother of God - Amazon EC2 With No Pain - Jason Michael dot com</title>
+  <meta name="author" content="Jason Michael">
+
+  
+  <meta name="description" content="This weekend I watched an eye-opening railscast explaining how to use Rubber to deploy Rails apps to Amazon EC2. Sounds pretty benign until you &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jason Michael dot com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jason Michael dot com</a></h1>
+  
+    <h2>My personal blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chewmanfoo.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Holy Mother of God - Amazon EC2 With No Pain</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-21T11:23:00-05:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This weekend I watched an eye-opening <a href="http://railscasts.com/episodes/347-rubber-and-amazon-ec2">railscast</a> explaining how to use Rubber to deploy Rails apps to Amazon EC2.  Sounds pretty benign until you actually see what can be done.  I&#8217;ll detail the whole experience in this post.</p>
+
+<!-- more -->
+
+
+<p>First, your Rails app has gotta be in the 3.x version.  It&#8217;s really good if you have the understanding that your app will be deployed to Amazon EC2 from the git-go.</p>
+
+<p>Second, your gonna get a Ubuntu linux instance when you deploy - deal with it.  If you&#8217;re a redhat bigot like me, you&#8217;ll have to overcome the initial shock.  But magically, Rubber with Rails does to linux packages and server configuration what Rails does to programming (Convention over Configuration), so it&#8217;s almost like Ubuntu isn&#8217;t even there under the covers.  But it is&#8230;  (so essentially, there aren&#8217;t <em>unlimited</em> choices for server/database etc.)  But there are an awful lot of good default configurations for things like apache with Postgresql, apache with MySQL, ngix with Postgresql etc.  There&#8217;s also some nosql configs - I&#8217;m interested in trying those out since Rubber seems to set up the connector and the database automagically.  Amazing.</p>
+
+<p>Third, you want to be on a workstation with rails directly loaded on it. I typically ssh into my development workstation from my Windows PC (I know, Windows?  SHAME!!) for various reasons.  I can do everything with this setup and rubber except test the app in my browser (since my browser would have to be on the remote workstation.)  All lucky fools sporting the MacBook Pro or jokers with linux on the desktop have no worries.  Come to think of it, I really need to make the jump.</p>
+
+<p>Here&#8217;s a list of rubber/capistrano commands (you run all of these in the root of the application):</p>
+
+<ul>
+<li><code>rubber vulcanize complete_passenger_postgresql</code> - this sets up your app for rubber.  You only run this once.</li>
+<li><code>cap rubber:create_staging</code> - you run this to create a &#8216;staging&#8217; environment - it runs for a very long time, and at the end you have a single instance on EC2 with database, web server, monit, and a boatload of other supporting services, which is visible from the internet and dns resolved from your desktop because rubber added the hostname from config/rubber/rubber.yml to your /etc/hosts file.</li>
+<li><code>cap rubber:destroy_all</code> - tear down all instances you stood up.  Do this every night unless you want to pay Amazon for instances running overnight doing nothing.  The beauty of this is you don&#8217;t have to keep them up - the rubber configuration files fully define the application environment in every way - you can stand up or tear down instances any time you want.</li>
+<li><code>cap rubber:create # db01 db:primary=true</code> - create the primary database required by the application (this is the database server only, not the app server rails is running on.)  Here&#8217;s where it starts getting amazing.</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - create a second database which is setup as a replicated slave to db01 above.  That&#8217;s right, I said replicated slave.  All the replicaton configuration is done for you.  It&#8217;s amazing.</li>
+<li><code>ALIAS=app01 ROLES=app cap rubber:create</code> - create the app server the rails app runs on.  It&#8217;s called app01 because you could create a hundred of them if you want to.  Call it app001 if you want to create a thousand.  Seriously.  But beware of hosting fees, dude.</li>
+<li><code>ALIAS=web01 ROLES=web cap rubber:create</code> - create the load balancer that will balance http sessions between the app servers built so far.  If you build 1 then the cluster is a cluster of 1.  But if you build 100 then this load balancer distributes traffic across all 100 app servers in a load-balanced fashion.  I think it uses round-robin.</li>
+<li><code>cap rubber:bootstrap</code> - prep all these boxes for deployment.  It puts them on EC2 instances and preps them for running.</li>
+<li><code>cap deploy:cold</code> - reboot all the instances and start them up</li>
+<li><code>cap rubber:tail_logs</code> - tail all the logs on all the servers you&#8217;ve setup on the EC2 instances.  This brings all the logs you need to be aware of into one space.</li>
+<li><code>cap deploy</code> - ???</li>
+<li><code>cap -T rubber</code> - shows all the commands available from capistrano/rubber.</li>
+<li><code>cap rubber:describe</code> - one of the commands from above.  Shows all the EC2 instances running.  Easy peasy.</li>
+<li><code>ALIAS=app02 ROLES=app cap rubber:create</code> - spin up another app server</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - spin up another database</li>
+<li><code>ALIAS=tools ROLES=web_tools cap rubber:create</code> - build a webtools box as well.  web tools boxes have all sorts of wonderful monitoring tools accessible over https for your cluster.  You can access webtools through the url <code>https://tools.app_name.com:8443</code>.  The username and password are defined in <code>config/rubber/rubber.yml</code>.</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jason Michael</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-21T11:23:00-05:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>Programming</a>, <a class='category' href='/blog/categories/provisioning-/'>Provisioning,</a>, <a class='category' href='/blog/categories/rails-/'>Rails,</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/on/'>on</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/" data-via="" data-counturl="http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/04/24/a-new-erlang-project/" title="Previous Post: A New Erlang Project">&laquo; A New Erlang Project</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/06/14/new-slice/" title="next Post: new slice">new slice &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>
+    I am a middle-aged white male living in North Texas, USA.  I am a career linux Systems Engineer and Software Developer with a Masters of Software Engineering from DePaul University and a Bachelors in Computer Science Engineering from the University of Texas at Arlington.  I love writing software and lately have been spending a lot of enjoyable time building web apps using Ruby on Rails.  In the past I have worked with PHP and before that Java and C/C++.
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/22/building-a-deployment-machine/">Building a Deployment Machine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/14/throw-everything-on-aws/">Throw Everything on AWS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/27/sweating-pipe/">Sweating Pipe</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/22/reboot/">Reboot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/06/rails-complex-form-with-children-and-grandchildren/">Rails Complex Form with Children and Grandchildren</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/chewmanfoo">@chewmanfoo</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'chewmanfoo',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section>
+  <h1>My Pinboard</h1>
+  <ul id="pinboard_linkroll">Fetching linkroll...</ul>
+  <p><a href="http://pinboard.in/u:chewmanfoo">My Pinboard Bookmarks &raquo;</a></p>
+</section>
+<script type="text/javascript">
+  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
+  var pinboard_user = "chewmanfoo"; //id target for pinboard list
+  var pinboard_count = 10; //id target for pinboard list
+  (function(){
+    var pinboardInit = document.createElement('script');
+    pinboardInit.type = 'text/javascript';
+    pinboardInit.async = true;
+    pinboardInit.src = '/javascripts/pinboard.js';
+    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
+  })();
+</script>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/chewmanfoo@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jason Michael -
+  <span class="credit">Brilliantly powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jasonmichaeldotcom';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/';
+        var disqus_url = 'http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: food | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/food/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Late Night Window]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/01/11/late-night-window/"/>
+    <updated>2012-01-11T01:52:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/01/11/late-night-window</id>
+    <content type="html"><![CDATA[<p>Up tonight working on deploying a new version of our OTA software to a regional cellular provider who will remain anonymous.  Since my wife is a troop leader and both my girls are Girl Scouts, I'm surrounded by crates and crates of cookies right now.  I'm eating haystacks at the moment.  <em>I know they changed the name, but I'm calling them haystacks.</em></p>
+
+<p>I wonder who makes these cookies?  They sure are good.  My dog got into a box of haystacks yesterday - ate a half a pack before we stopped him.  That dog sure was acting strange afterwards.</p>
+
+<p>I try to imagine I'm doing worthwhile work, like Richard Feynman at Los Alamos, when I'm working one of these windows.  I wonder if the boys in the Manhattan Project ate Girl Scout cookies when they designed the first atom bomb. Not very likely.</p>
+]]></content>
+  </entry>
+  
+</feed>

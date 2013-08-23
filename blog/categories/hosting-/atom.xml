@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hosting, | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/hosting-/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[new slice]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/06/14/new-slice/"/>
+    <updated>2012-06-14T18:07:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/06/14/new-slice</id>
+    <content type="html"><![CDATA[<p>I have successfully migrated my VPS from a CentOS 5.6 slice on linode to anew CentOS 6.2 slice on linode.  I did this because I needed ot upgrade to CentOS 6.2 and I had no idea how to do it otherwise.  So, I bought a new slice and began to copy all my stuff over.  I reinstalled iRedMail (for nospam (at) jason-michael.com etc.) and rails with rvm and all the gems and all the other dev stuff and the mysql instance and postgresql etc.  Rails makes it so easy to move from server to server - since my projects are all on github, I just do a git clone to get the project on my new server, then I introduce myself (on the new server) to github so I can commit.  It works great.</p>
+
+<!-- more -->
+
+
+<p>Details:</p>
+]]></content>
+  </entry>
+  
+</feed>

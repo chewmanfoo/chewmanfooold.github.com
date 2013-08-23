@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Generic multiple attachments in Rails - Jason Michael dot com</title>
+  <meta name="author" content="Jason Michael">
+
+  
+  <meta name="description" content="If you use paperclip for attaching pictures to models in Rails, you&#8217;ve probably run into this problem. At first, you&#8217;ve added a picture &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jason Michael dot com" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jason Michael dot com</a></h1>
+  
+    <h2>My personal blog</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chewmanfoo.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Generic Multiple Attachments in Rails</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-23T16:16:00-05:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>If you use paperclip for attaching pictures to models in Rails, you&#8217;ve probably run into this problem.  At first, you&#8217;ve added a picture called &#8216;diagram&#8217; to an MVC called WhitePaper, and it works fine.  You can click on a link (diagram_url) and it pops the picture up in your browser, and everybody says &#8220;Wow!&#8221;  Then people start asking you to attach other pictures to other models, and more pictures to the WhitePaper model, and you discover that you&#8217;ve become an idiot.  Every time somebody asks for an attachment, you have to add code.  And you thought Rails was agile!</p>
+
+<!-- more -->
+
+
+<p>What you really need is a truly generic AttachedDocument which can be added to any model with a line <code>has many attached_documents</code> or <code>attachable</code>.  You ought to be able to render a view of 1 - n AttachedDocuments, add other attachments and remove existing ones.  Later on, you might want to keep versions of AttachedDocuments, so you can revert a change if necessary. And somehow, the new magic AttachedDocument ought to be able o sense it&#8217;s document&#8217;s mime type, size etc., and create resuzes and thumbnails using ImageMagik with ease.  Surely it&#8217;s possible.  Or has it already been done?  by this I mean, has anyone already rolled Paperclip into a generic AttachedDocuments gem?</p>
+
+<h3>CarrierWave attachments</h3>
+
+<p>I&#8217;m watchng ryanb&#8217;s excellent tutorial on using CarrierWave for file atachments as an alternative to Paperclip.  See here: <a href="http://railscasts.com/episodes/253-carrierwave-file-uploads">link</a>.  In this project, he creates a Gallery model and is able to create multiple Galleries and add multiple picture attachments to each Gallery.  This might be close to what I need - if I convert his Gallery model to a GenericAttachments model, then figure out how to allow multiple GenericAttachment&#8217;s per model-with-generic-attachments, then figure out how to allow a fixed set of &#8220;safe&#8217; mimetypes like png, jpeg, pdf, doc and xls, this might just work.</p>
+
+<h3>Links</h3>
+
+<ul>
+<li><a href="https://github.com/thoughtbot/paperclip">paperclip</a></li>
+<li><a href="http://groups.google.com/group/paperclip-plugin/browse_thread/thread/d03cac32d2abd4ab">discussion on googlecode</a></li>
+<li><a href="http://rubygems.org/search?utf8=%E2%9C%93&amp;query=paperclip">paperclip-related gems</a>
+*</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jason Michael</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-23T16:16:00-05:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails/" data-via="" data-counturl="http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/18/erlang-on-aws/" title="Previous Post: erlang on AWS">&laquo; erlang on AWS</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/03/25/making-pdfs/" title="next Post: making pdfs">making pdfs &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>
+    I am a middle-aged white male living in North Texas, USA.  I am a career linux Systems Engineer and Software Developer with a Masters of Software Engineering from DePaul University and a Bachelors in Computer Science Engineering from the University of Texas at Arlington.  I love writing software and lately have been spending a lot of enjoyable time building web apps using Ruby on Rails.  In the past I have worked with PHP and before that Java and C/C++.
+  </p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/22/building-a-deployment-machine/">Building a Deployment Machine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/14/throw-everything-on-aws/">Throw Everything on AWS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/27/sweating-pipe/">Sweating Pipe</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/22/reboot/">Reboot</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/06/rails-complex-form-with-children-and-grandchildren/">Rails Complex Form with Children and Grandchildren</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/chewmanfoo">@chewmanfoo</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'chewmanfoo',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section>
+  <h1>My Pinboard</h1>
+  <ul id="pinboard_linkroll">Fetching linkroll...</ul>
+  <p><a href="http://pinboard.in/u:chewmanfoo">My Pinboard Bookmarks &raquo;</a></p>
+</section>
+<script type="text/javascript">
+  var linkroll = 'pinboard_linkroll'; //id target for pinboard list
+  var pinboard_user = "chewmanfoo"; //id target for pinboard list
+  var pinboard_count = 10; //id target for pinboard list
+  (function(){
+    var pinboardInit = document.createElement('script');
+    pinboardInit.type = 'text/javascript';
+    pinboardInit.async = true;
+    pinboardInit.src = '/javascripts/pinboard.js';
+    document.getElementsByTagName('head')[0].appendChild(pinboardInit);
+  })();
+</script>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/chewmanfoo@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Jason Michael -
+  <span class="credit">Brilliantly powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jasonmichaeldotcom';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails/';
+        var disqus_url = 'http://chewmanfoo.github.com/blog/2012/03/23/generic-multiple-attachments-in-rails/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

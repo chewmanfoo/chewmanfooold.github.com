@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: databases | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/databases/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails with Unfriendly Databases]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases/"/>
+    <updated>2012-06-20T22:02:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases</id>
+    <content type="html"><![CDATA[<p>We all know that Rails is "Opinionated" when it comes to the backend database schema.  Tables are named after the plural word describing what they contain ('posts', not 'Post' or 'post' or 'boatload_o_posts').  Tables have a primary key called 'id'.  In fact, the easiest way to get along with rails from the gitgo is to let rails build it's backend database for you, using migrations.  That's crucial to getting your Rails mojo kung-fu working.  But what hapens when you need to connect your Rails app to an unfriendly database?  What if you have to read data from a database designed by some one who, gasp!, doesn't do Rails?  What then???</p>
+
+<p>I recently added a report to my corporate site survey Rails project which needed to pull data from a bunch of joined tables in a database which was the backend for Manage Engine's <a href="http://www.manageengine.com/products/support-center/">supportcenter</a>.  I really don't like supportcenter, and I <em>really</em> don't like supportcenter's database.  Wow what a flaming sack of dogshit that thing is.</p>
+
+<!-- more -->
+
+
+<h2>Connecting to the unfriendly database</h2>
+
+<p>You can either add login/password to your model, or add them to database.yml.  I chose to add them to database.yml:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>Then, we'll use these credentials to connect to the database and run queries in our model.</p>
+
+<h2>A new Rails model for the unfriendly database's table</h2>
+
+<p>Create a new model which inherits from ActiveRecord, like so:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<h2>Queries and results</h2>
+
+<p>Now we can add queries to the Workorder model which pull from this unfriendly supportcenter database:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>Note the godawful table attributes in the supportcenter database.  If you're sitting on your couch late at night, and you hear a knock on the door, and you go to the door and open it and look around, and if you see the supportcenter database on your doorstep, do not stomp out the fire!!!</p>
+
+<p>Therefore, we can slice and dice the result array from this query within the controller:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>It works like a charm.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: aws, | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/aws-/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Throw Everything on AWS]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2013/04/14/throw-everything-on-aws/"/>
+    <updated>2013-04-14T18:19:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2013/04/14/throw-everything-on-aws</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<p>I am paying $40 a month to linode for a 1Gb slice with no practical limits on transfers (there may in fact be limits, but I haven't experienced them.)  I'm exploring whether I can move the services I run on linode to AWS, free tier, so save some $$.</p>
+
+<p>I run a wiki and a mail server.</p>
+
+<p>I found this: http://www.inboxs.com/index.php/linux-os/ec2-aws/10-how-to-install-iredmail-on-ec2</p>
+
+<p>The free tier allows Amazon linux as well as ubuntu.  The transfer limits may be an issue with a mail server.  I'm debating on imap mail servers available online. The upshot is that when I get turned into a forward for spam, I have to fight it on my linode server, but the imap provider would be responsible for it (time = money, so it's often a good deal).</p>
+
+<p>More to come.</p>
+]]></content>
+  </entry>
+  
+</feed>

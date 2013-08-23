@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: links | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/links/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing for Fun and Profit]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/03/16/writing-for-fun-and-profit/"/>
+    <updated>2012-03-16T17:57:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/03/16/writing-for-fun-and-profit</id>
+    <content type="html"><![CDATA[<p>I have written a kazillion short stories and one screenplay and have started another.</p>
+
+<!-- more -->
+
+
+<p>I want to join some sort of Writer's Guild in North Texas.  I found the following on the web:</p>
+
+<ul>
+<li><a href="http://www.writersleague.org/">Writer's League of Texas</a>
+
+<ul>
+<li>membership: $50 individual, $80 couple</li>
+<li>plusses: lots of exposure, State-wide writers to meet and mingle, events are great</li>
+<li>minuses: mostly in Austin</li>
+</ul>
+</li>
+<li><a href="http://www.dallasscreenwriters.com/">Dallas Screenwriter's Association</a>
+
+<ul>
+<li>membership: #85 individual, $45 each additional family member</li>
+<li>plusses: local (Dallas, anyways)</li>
+<li>minuses: expensive</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

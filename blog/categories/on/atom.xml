@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: on | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/on/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails with Unfriendly Databases]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases/"/>
+    <updated>2012-06-20T22:02:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/06/20/rails-with-unfriendly-databases</id>
+    <content type="html"><![CDATA[<p>We all know that Rails is "Opinionated" when it comes to the backend database schema.  Tables are named after the plural word describing what they contain ('posts', not 'Post' or 'post' or 'boatload_o_posts').  Tables have a primary key called 'id'.  In fact, the easiest way to get along with rails from the gitgo is to let rails build it's backend database for you, using migrations.  That's crucial to getting your Rails mojo kung-fu working.  But what hapens when you need to connect your Rails app to an unfriendly database?  What if you have to read data from a database designed by some one who, gasp!, doesn't do Rails?  What then???</p>
+
+<p>I recently added a report to my corporate site survey Rails project which needed to pull data from a bunch of joined tables in a database which was the backend for Manage Engine's <a href="http://www.manageengine.com/products/support-center/">supportcenter</a>.  I really don't like supportcenter, and I <em>really</em> don't like supportcenter's database.  Wow what a flaming sack of dogshit that thing is.</p>
+
+<!-- more -->
+
+
+<h2>Connecting to the unfriendly database</h2>
+
+<p>You can either add login/password to your model, or add them to database.yml.  I chose to add them to database.yml:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>Then, we'll use these credentials to connect to the database and run queries in our model.</p>
+
+<h2>A new Rails model for the unfriendly database's table</h2>
+
+<p>Create a new model which inherits from ActiveRecord, like so:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<h2>Queries and results</h2>
+
+<p>Now we can add queries to the Workorder model which pull from this unfriendly supportcenter database:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>Note the godawful table attributes in the supportcenter database.  If you're sitting on your couch late at night, and you hear a knock on the door, and you go to the door and open it and look around, and if you see the supportcenter database on your doorstep, do not stomp out the fire!!!</p>
+
+<p>Therefore, we can slice and dice the result array from this query within the controller:</p>
+
+<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+
+<p>It works like a charm.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Holy Mother of God - Amazon EC2 With No Pain]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain/"/>
+    <updated>2012-05-21T11:23:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/05/21/holy-mother-of-god-amazon-ec2-with-no-pain</id>
+    <content type="html"><![CDATA[<p>This weekend I watched an eye-opening <a href="http://railscasts.com/episodes/347-rubber-and-amazon-ec2">railscast</a> explaining how to use Rubber to deploy Rails apps to Amazon EC2.  Sounds pretty benign until you actually see what can be done.  I'll detail the whole experience in this post.</p>
+
+<!-- more -->
+
+
+<p>First, your Rails app has gotta be in the 3.x version.  It's really good if you have the understanding that your app will be deployed to Amazon EC2 from the git-go.</p>
+
+<p>Second, your gonna get a Ubuntu linux instance when you deploy - deal with it.  If you're a redhat bigot like me, you'll have to overcome the initial shock.  But magically, Rubber with Rails does to linux packages and server configuration what Rails does to programming (Convention over Configuration), so it's almost like Ubuntu isn't even there under the covers.  But it is...  (so essentially, there aren't <em>unlimited</em> choices for server/database etc.)  But there are an awful lot of good default configurations for things like apache with Postgresql, apache with MySQL, ngix with Postgresql etc.  There's also some nosql configs - I'm interested in trying those out since Rubber seems to set up the connector and the database automagically.  Amazing.</p>
+
+<p>Third, you want to be on a workstation with rails directly loaded on it. I typically ssh into my development workstation from my Windows PC (I know, Windows?  SHAME!!) for various reasons.  I can do everything with this setup and rubber except test the app in my browser (since my browser would have to be on the remote workstation.)  All lucky fools sporting the MacBook Pro or jokers with linux on the desktop have no worries.  Come to think of it, I really need to make the jump.</p>
+
+<p>Here's a list of rubber/capistrano commands (you run all of these in the root of the application):</p>
+
+<ul>
+<li><code>rubber vulcanize complete_passenger_postgresql</code> - this sets up your app for rubber.  You only run this once.</li>
+<li><code>cap rubber:create_staging</code> - you run this to create a 'staging' environment - it runs for a very long time, and at the end you have a single instance on EC2 with database, web server, monit, and a boatload of other supporting services, which is visible from the internet and dns resolved from your desktop because rubber added the hostname from config/rubber/rubber.yml to your /etc/hosts file.</li>
+<li><code>cap rubber:destroy_all</code> - tear down all instances you stood up.  Do this every night unless you want to pay Amazon for instances running overnight doing nothing.  The beauty of this is you don't have to keep them up - the rubber configuration files fully define the application environment in every way - you can stand up or tear down instances any time you want.</li>
+<li><code>cap rubber:create # db01 db:primary=true</code> - create the primary database required by the application (this is the database server only, not the app server rails is running on.)  Here's where it starts getting amazing.</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - create a second database which is setup as a replicated slave to db01 above.  That's right, I said replicated slave.  All the replicaton configuration is done for you.  It's amazing.</li>
+<li><code>ALIAS=app01 ROLES=app cap rubber:create</code> - create the app server the rails app runs on.  It's called app01 because you could create a hundred of them if you want to.  Call it app001 if you want to create a thousand.  Seriously.  But beware of hosting fees, dude.</li>
+<li><code>ALIAS=web01 ROLES=web cap rubber:create</code> - create the load balancer that will balance http sessions between the app servers built so far.  If you build 1 then the cluster is a cluster of 1.  But if you build 100 then this load balancer distributes traffic across all 100 app servers in a load-balanced fashion.  I think it uses round-robin.</li>
+<li><code>cap rubber:bootstrap</code> - prep all these boxes for deployment.  It puts them on EC2 instances and preps them for running.</li>
+<li><code>cap deploy:cold</code> - reboot all the instances and start them up</li>
+<li><code>cap rubber:tail_logs</code> - tail all the logs on all the servers you've setup on the EC2 instances.  This brings all the logs you need to be aware of into one space.</li>
+<li><code>cap deploy</code> - ???</li>
+<li><code>cap -T rubber</code> - shows all the commands available from capistrano/rubber.</li>
+<li><code>cap rubber:describe</code> - one of the commands from above.  Shows all the EC2 instances running.  Easy peasy.</li>
+<li><code>ALIAS=app02 ROLES=app cap rubber:create</code> - spin up another app server</li>
+<li><code>ALIAS=db02 ROLES=db cap rubber:create</code> - spin up another database</li>
+<li><code>ALIAS=tools ROLES=web_tools cap rubber:create</code> - build a webtools box as well.  web tools boxes have all sorts of wonderful monitoring tools accessible over https for your cluster.  You can access webtools through the url <code>https://tools.app_name.com:8443</code>.  The username and password are defined in <code>config/rubber/rubber.yml</code>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

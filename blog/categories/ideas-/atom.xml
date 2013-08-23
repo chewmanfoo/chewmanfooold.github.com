@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ideas, | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/ideas-/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Idea Walk]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/02/12/idea-walk/"/>
+    <updated>2012-02-12T19:11:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/02/12/idea-walk</id>
+    <content type="html"><![CDATA[<p>I took a walk today with my dog and had a number of ideas.</p>
+
+<!-- more -->
+
+
+<h2>Community Cooking</h2>
+
+<p>I could smell what people were cooking in their houses.  Could there be a way where everyone could taste the dinner of everyone else?  Could we all login to a <strong>web service</strong> and offer up 'an extra helping' of Beef Stroghanoff or Beef Enchiladas or Chicken Cacciatore for cost plus a small fee?  Could the entire neighborhood find themselves cooking for others and making a tidy profit, such that <em>when you cook at home, the service pays for the materials out of your exchange profits</em>?</p>
+
+<h2>Hive messaging</h2>
+
+<p>Could there be a way to be able to text the guy next to you anonymously without meeting him first?  Perhaps everybody would be registered with a service that tracks our sms/mms handle, photo and GPS coordinates, so that you could launch the app on your phone and be able to pick the stranger next to you and sms "Hello" to him?  I see this as more of an advancement in civilization than just a new service.  But, just like the guy who tries to remove a screw with a hammer because all he knows is the hammer and thus, to him, everything looks like a nail, I'm solving this problem with a web service.  So I can see a weakness in my solution.  But surely there's an excellent solution to this.</p>
+]]></content>
+  </entry>
+  
+</feed>

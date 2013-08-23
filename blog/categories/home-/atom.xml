@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: home, | Jason Michael dot com]]></title>
+  <link href="http://chewmanfoo.github.com/blog/categories/home-/atom.xml" rel="self"/>
+  <link href="http://chewmanfoo.github.com/"/>
+  <updated>2013-08-23T18:11:32-05:00</updated>
+  <id>http://chewmanfoo.github.com/</id>
+  <author>
+    <name><![CDATA[Jason Michael]]></name>
+    <email><![CDATA[nospam@jason-michael.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sweating Pipe]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/08/27/sweating-pipe/"/>
+    <updated>2012-08-27T15:38:00-05:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/08/27/sweating-pipe</id>
+    <content type="html"><![CDATA[<p>10 years ago, my wife and I bought a money pit which we affectionately call home.  Since then, we have both learned a wide variety of building trades through a process known as "dunk you in the freezing water to see if you can swim".  We love the house, and continue to work on it and improve it.  This weekend, I had occasion to work on plumbing with copper pipe.  Here are some tips, for the uninitiated:</p>
+
+<!-- more -->
+
+
+<h2>Sweating pipe</h2>
+
+<p>For this article, I'll call any pipe fitting a joint.  This might be an elbow, or a coupler, or any other joining pipe fitting.  Sweating pipe involves cutting pipes to appropriate lengths, sanding the ends of the pipe to about 1/2" (so it shines on every surface) covering the joing with flux on the inside, sliding the pipe into the joint fully, heating the joint with a torch until the flux bubbles and the joint accepts melty metal and touching the joint with the melty metal so that the metal melts into the joint.</p>
+
+<h2>Maxim</h2>
+
+<ul>
+<li>never sweat wet pipe - if there's water in the line, you'll have trouble getting clean solid joints.  You've been warned.</li>
+<li>whatever you sweat in a jig outside of the area where the pipe will be installed will never leak - whatever you sweat in the bathroom or laundry room or in a hole somewhere will likely leak. So build most of the new part at a jig, then take it to the jobsite and make adjustments.</li>
+</ul>
+
+
+<h2>Tips</h2>
+
+<ul>
+<li>Build a jig.  Might as well take your time and sweat pipe in a cool area where you can be comfortable.  I nailed some 2x4's together and added some spring clamps to hold the pipe</li>
+<li>Examine every joint carefully after you sweat it.  If it has melty metal in the joint (especially if it has a thin "painted on" appearance of melty metal around the crack near the joint on all sides), it won't leak.  if it doesn't it will leak under pressure.  If you can't seee the other side of the joint, then have faith in the magic of sweating pipe.  Essentially, if you draw a line perpendicular to the horizon and up through the circumference of the pipe, and if you get melty metal on the top of both sides of that line, you're probably fine.</li>
+<li>You can fix a leaking joint after it's installed with flux, melty metal and a torch, but it ain't easy</li>
+<li>You may need to cut the leaking joint out and re-sweat it.  Since you can't re-use a joint normally, this will involve adding two new coupler fittings - so be sure to have plenty of room to both sides of the new fitting in case you need to replace the entire thing.</li>
+<li>The melty metal is important - use it liberally.  You can clean up your work with the melty metal stick after you're dome sweating the pipe (to remove any drips etc.).  Note that some melty metals are made for some conditions.  For example, a different melty metal (silver) is required for copper pipe joints under the slab.  Don't ask me why, but this is why...</li>
+<li>Call a plumber if you have to do something that you can't imagine how to do.</li>
+</ul>
+
+
+<h2>Tools</h2>
+
+<p>Keep this stuff around at all times.
+ * A torch - a MAP torch with the auto-starting end is an amazing tool, no garage should be without one.
+ * Flux - you can't sweat pipe without it.  Buy the tub with the screw on lid.  Flux in tubes is for posers.
+ * A Flux brush - don't get that stuff on your fingers.
+ * Melty metal
+ * Plenty of 1/2" and 3/4" copper pipe fittings - elbow's, couplers, etc.
+ * At least 8' length of both 1/2" and 3/4" copper pipe
+ * Traditional and tight quarters pipe cutter.  I bought the tight quarters <a href="http://compare.ebay.com/like/280303231767?var=lv&amp;ltyp=AllFixedPriceItemTypes&amp;var=sbar">General Auto Cut</a>.  They're fitted for the pipe diameter - so you have to buy one for 1/2" and one for 3/4", but they work so well I'd say it's worth it.
+ * A heat barrier.  You'll probably have to sweat a pipe at some point which is in a wall cavity, so you run the risk of setting the wall on fire.  They make a cloth with grommets on the corners which you can nail up between the wall and your pipes so your torch flame doesn't contact the wall directly.  I use an old automobile license plate.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Difficulty Finding Time for Life Outside of Work]]></title>
+    <link href="http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work/"/>
+    <updated>2012-01-18T19:19:00-06:00</updated>
+    <id>http://chewmanfoo.github.com/blog/2012/01/18/difficulty-finding-time-for-life-outside-of-work</id>
+    <content type="html"><![CDATA[<p>If you work a technical job with a salary, you're already facing two great dilemmas.  1.) you work for a salary, and 2.) you work with technology, where the <em>work</em> is almost never <em>done</em>.  I find myself caught in a trap often enough - I don't do well if I don't get adequate sleep nor if I don't have adequate time to spend with my wife and kids.  Yet I don't do well at work unless I'm perfectly willing to burn the proverbial candle at both ends. Dealing with this struggle effectively requires a number of crucial habits and procedures which you do not violate no matter what.</p>
+
+<!-- more -->
+
+
+<h2>Be Good to Yourself</h2>
+
+<p>Get plenty of sleep. Get three decent meals every day and don't carb up and don't eat because you're bored and don't eat crap.  On a typical commercial street in a typical city there are about 10 restaurants.  Get used to the fact that you can never eat in 80% of them - ever.  McDonald's has nothing for sale for you if you care at all about your health.  A few cliche's come to mind: <em>don't dig your grave with a spoon</em> and <em>eat to live, don't live to eat</em>.  Above all, don't let your all-consuming, never-ending cluster-fuck of a job cause you to compromise on your health.  It's not worth it.</p>
+
+<h2>Be Honest About Your Abilities</h2>
+
+<p>You may think telling your supervisor that you can do some technical task that you've never done before is a great career move.  While she's not looking, you can hit the web and learn how to do it in a flash and produce something that works in a short amount of time.  But in reality, she'll catch you despirately searching the web and accuse you of wasting time on the interwebs.  And more often than not, you'll create total crap - it will be your first try after all.  It's better to be honest.  Instead of saying, "Sure I can do that!", say " I've never done that, but I'm interested in learning!"  Who know's, the company might pay to train you if you show a talent for the task.  Paid training is usually a waste of time, but it can afford you contacts in the industry - folks who can help you climb your own ladder of success.  So, be honest first.</p>
+
+<h2>Be Careful with Deadlines</h2>
+
+<p>If you think you can't finish the project on time, say so.  Don't nag on and on about Management's inability to understand the technical process, but make one clear concise statement about the deadline and move on.  Like so: "We're putting this project first and devoting every resource to it's success, but I do not believe we will be able to deliver on time and under budget.  Here's why."</p>
+
+<h2>Get it in Writing</h2>
+
+<p>If you're surrounded by people who refuse to send memo's or emails when they ask for things or demand a change in procedure, you're in for trouble.  People invariably forget what they asked for, particularly when things go south.  People who refuse to 'put it in writing' also seem to be excellent at explaining a past event in a way that makes their involvement in the failure blameless and innocent.  So insist on an email.  If your supervisor stops you at the water cooler and asks you to change course in a project, go back to your desk and write a recap email.  Like so: "Today we met briefly at the water cooler, and I understood you to say you would like us to change this or that about the project.  Can you confirm this and address a few of my concerns below."  You'll be glad you did.</p>
+]]></content>
+  </entry>
+  
+</feed>
