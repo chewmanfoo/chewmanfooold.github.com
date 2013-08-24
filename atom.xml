@@ -4,7 +4,7 @@
   <title><![CDATA[Jason Michael dot com]]></title>
   <link href="http://chewmanfoo.github.com/atom.xml" rel="self"/>
   <link href="http://chewmanfoo.github.com/"/>
-  <updated>2013-08-23T23:04:08-05:00</updated>
+  <updated>2013-08-23T23:08:06-05:00</updated>
   <id>http://chewmanfoo.github.com/</id>
   <author>
     <name><![CDATA[Jason Michael]]></name>
@@ -38,7 +38,7 @@ The product should integrate with puppet and activemq, and provide a secure, fau
 
 <p>I am paying $40 a month to linode for a 1Gb slice with no practical limits on transfers (there may in fact be limits, but I haven&#8217;t experienced them.)  I&#8217;m exploring whether I can move the services I run on linode to AWS, free tier, so save some $$.</p>
 
-<p>iRedMail</p>
+<h3>iRedMail</h3>
 
 <p>I run a wiki and a mail server.</p>
 
@@ -46,7 +46,7 @@ The product should integrate with puppet and activemq, and provide a secure, fau
 
 <p>The free tier allows Amazon linux as well as ubuntu.  The transfer limits may be an issue with a mail server.  I&#8217;m debating on imap mail servers available online. The upshot is that when I get turned into a forward for spam, I have to fight it on my linode server, but the imap provider would be responsible for it (time = money, so it&#8217;s often a good deal).</p>
 
-<p>Amazon Glacier</p>
+<h3>Amazon Glacier</h3>
 
 <p>Backups are essential.  You don&#8217;t value them until you need them, but when you need them, and you don&#8217;t have them, it could be devastating.  You need a system which will bacup your critical files periodically, and perform the function whether you like it or not.  Set it and forget it.  And it always helps if somebody else is contractually obligated to manage the media, store the tapes offsite, restore upon demand.</p>
 
