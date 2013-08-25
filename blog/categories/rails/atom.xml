@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | Jason Michael dot com]]></title>
   <link href="http://chewmanfoo.github.com/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://chewmanfoo.github.com/"/>
-  <updated>2013-08-25T00:43:04-05:00</updated>
+  <updated>2013-08-25T11:29:19-05:00</updated>
   <id>http://chewmanfoo.github.com/</id>
   <author>
     <name><![CDATA[Jason Michael]]></name>
@@ -25,11 +25,37 @@
 
 <p>After fighting with this for a week or so, I figured it out.  It's all in the controller, where the child and grandchild is created at first:</p>
 
-<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+<p>{% codeblock scheduled_tests_controller.rb %}
+  def new</p>
+
+<pre><code>@scheduled_test = ScheduledTest.new
+
+1.times do
+  wireless_client_test = @scheduled_test.wireless_client_tests.build
+  1.times { wireless_client_test.build_wireless_client }
+end
+</code></pre>
+
+<p>  ...
+{% endcodeblock %}</p>
 
 <p>And in the helper method, where code is given to the javascript to add the new fields when "Add *" is clicked:</p>
 
-<p>Liquid error: undefined method `Py_IsInitialized' for RubyPython::Python:Module</p>
+<p>{% codeblock application.rb %}
+  def special_button_to_add_fields(name, f, association, child_association)</p>
+
+<pre><code>new_object = f.object.class.reflect_on_association(association).klass.new
+child_object = f.object.class.reflect_on_association(association).klass.reflect_on_association(child_association).klass.new
+new_object.wireless_client = child_object
+
+fields = f.fields_for(association, new_object, :child_index =&gt; "new_#{association}") do |builder|
+  render(association.to_s.singularize + "_fields", :f =&gt; builder)
+end
+button_to_function(name, h("add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")"))
+</code></pre>
+
+<p>  end
+{% endcodeblock %}</p>
 
 <p>Note that I had to change Ryan's helper adding in the second association and a bit of code to realize the grandchildren objects. Not only do you have to create the grandchild, but you have to associate the grandchild with the child so the form works properly.</p>
 
